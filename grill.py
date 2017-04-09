@@ -13,11 +13,11 @@ def grill():
     params = {'section': 1, 'temperature': temp1 + 80}
     headers= {'Content-Type': 'application/json'}
 
-    print str(datetime.now()) + str(requests.post(url, params=params, headers=headers))
+    print str(datetime.now()) + " -- params: " + str(params) + " headers: " + str(headers) + " response: " + str(requests.post(url, params=params, headers=headers))
     time.sleep(1)
     temp2 = int(abs(math.sin(time.time() / 90 - 60)) * 90)
 
     params = {'section':2, 'temperature': temp2 + 80}
-    print str(datetime.now()) + str(requests.post(url, params=params, headers=headers))
+    print str(datetime.now()) + " -- params: " + str(params) + " headers: " + str(headers) + " response: " + str(requests.post(url, params=params, headers=headers))
 
 grill()
